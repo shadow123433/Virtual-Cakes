@@ -1,0 +1,206 @@
+/* 1. RESET E CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #d63384;      /* Rosa vibrante */
+    --primary-hover: #b92a6e;
+    --whatsapp: #25d366;     /* Verde oficial */
+    --whatsapp-hover: #128c7e;
+    --dark: #2d2d2d;
+    --light-bg: #fff5f8;
+    --white: #ffffff;
+    --shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2. HEADER E LOGO */
+header {
+    background: var(--white);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.logo span { color: var(--primary); }
+
+.btn-contato {
+    background: var(--whatsapp);
+    color: var(--white) !important;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+/* 3. HERO SECTION (BANNER PRINCIPAL) */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1089&auto=format&fit=crop') center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ESTILO DO BOTÃO DE CARDÁPIO */
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--white) !important;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(214, 51, 132, 0.4);
+}
+
+/* 4. GRID DE PRODUTOS */
+#cardapio { padding: 60px 0; }
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Padrão mobile: 1 coluna */
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+
+.img-placeholder {
+    height: 200px;
+    background: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.card-info { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+.card-info h3 { font-size: 1.3rem; margin-bottom: 10px; }
+.card-info p { font-size: 0.9rem; color: #777; margin-bottom: 15px; flex-grow: 1; }
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+/* BOTÃO WHATSAPP NOS CARDS */
+.buy-button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--whatsapp);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buy-button:hover { background-color: var(--whatsapp-hover); }
+
+/* 5. FOOTER */
+footer {
+    background: #f8f8f8;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+/* 6. RESPONSIVIDADE (TABLET E PC) */
+@media (min-width: 768px) {
+    .hero-content h1 { font-size: 3.5rem; }
+    
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+    }
+}
+
+@media (min-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas em PCs */
+    }
+}

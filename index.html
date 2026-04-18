@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doce Momento | Bolos Artesanais</title>
+    <link rel="stylesheet" href="./public/styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Bolos artesanais feitos com amor, pedidos direto pelo WhatsApp.</h1>
+            <p>Escolha seu sabor favorito abaixo e receba o link do pedido pronto para enviar no nosso chat.</p>
+            <a href="#cardapio" class="cta-button">Ver Cardápio</a>
+        </div>
+    </section>
+
+    <main class="container" id="cardapio">
+        <h2 class="section-title">Nossos Destaques</h2>
+        
+        <div class="product-grid">
+            
+            <div class="card">
+                <img src="./public/assets/imgs/img.webp" alt="Bolo de Chocolate" class="img-placeholder">
+                <div class="card-info">
+                    <h3>Bolo de Chocolate Gourmet</h3>
+                    <p>Massa fofinha com cobertura de brigadeiro belga.</p>
+                    <span class="price">R$ 65,00</span>
+                    <button class="buy-button" onclick="enviarPedido('Bolo de Chocolate Gourmet', '65,00')">Pedir no WhatsApp</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./public/assets/imgs/img.avif" alt="Red Velvet" class="img-placeholder">
+                <div class="card-info">
+                    <h3>Red Velvet com Frutas</h3>
+                    <p>O clássico americano com toque de frutas vermelhas frescas.</p>
+                    <span class="price">R$ 85,00</span>
+                    <button class="buy-button" onclick="enviarPedido('Red Velvet', '85,00')">Pedir no WhatsApp</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./public/assets/imgs/img.jpg" alt="Cenoura com Afeto" class="img-placeholder">
+                <div class="card-info">
+                    <h3>Cenoura com Afeto</h3>
+                    <p>Aquele bolo caseiro com calda craquelada de chocolate.</p>
+                    <span class="price">R$ 45,00</span>
+                    <button class="buy-button" onclick="enviarPedido('Bolo de Cenoura', '45,00')">Pedir no WhatsApp</button>
+                </div>
+            </div>
+
+        </div> </main>
+
+    <footer>
+        <p>&copy; 2026 Doce Momento - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="./public/scripts/script.js"></script>
+</body>
+</html>
