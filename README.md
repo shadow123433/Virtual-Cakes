@@ -1,3 +1,8 @@
+# Site rodando online na vercel.
+virtual-cakes-git-main-shadow123433s-projects.vercel.app
+
+---
+
 # 🍰 VirtualCakes
 
 Um site simples e funcional para venda de bolos online, permitindo que clientes visualizem produtos e realizem pedidos diretamente pelo WhatsApp.
