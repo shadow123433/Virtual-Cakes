@@ -5,9 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doce Momento | Bolos Artesanais</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/cart.css">
+    <link rel="stylesheet" href="styles/forms.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<div id="alert-overlay">
+  <div class="alert-box">
+    <p id="alert-text">Mensagem aqui</p>
+    <button onclick="fecharAlerta()">OK</button>
+  </div>
+</div>
+
+<div id="cart-icon" onclick="openCart()">
+  🛒 <span id="cart-count">0</span>
+</div>
+
+
     <section class="hero">
         <div class="container hero-content">
             <h1>Bolos artesanais feitos com amor, pedidos direto pelo WhatsApp.</h1>
@@ -27,7 +43,7 @@
                     <h3>Bolo de Chocolate Gourmet</h3>
                     <p>Massa fofinha com cobertura de brigadeiro belga.</p>
                     <span class="price">R$ 65,00</span>
-                    <button class="buy-button" onclick="enviarPedido('Bolo de Chocolate Gourmet', '65,00')">Pedir no WhatsApp</button>
+                    <button class="buy-button" onclick="addToCart('Bolo de Chocolate Gourmet', 65, 'assets/imgs/img.webp')">Adicionar ao Carrinho</button>
                 </div>
             </div>
 
@@ -37,7 +53,7 @@
                     <h3>Red Velvet com Frutas</h3>
                     <p>O clássico americano com toque de frutas vermelhas frescas.</p>
                     <span class="price">R$ 85,00</span>
-                    <button class="buy-button" onclick="enviarPedido('Red Velvet', '85,00')">Pedir no WhatsApp</button>
+                    <button class="buy-button" onclick="addToCart('Red Velvet', 85, 'assets/imgs/img.avif')">Adicionar ao Carrinho</button>
                 </div>
             </div>
 
@@ -47,7 +63,7 @@
                     <h3>Cenoura com Afeto</h3>
                     <p>Aquele bolo caseiro com calda craquelada de chocolate.</p>
                     <span class="price">R$ 45,00</span>
-                    <button class="buy-button" onclick="enviarPedido('Bolo de Cenoura', '45,00')">Pedir no WhatsApp</button>
+                    <button class="buy-button" onclick="addToCart('Bolo de Cenoura', 45, 'assets/imgs/img.jpg')">Adicionar ao Carrinho</button>
                 </div>
             </div>
 
@@ -57,6 +73,76 @@
         <p>&copy; 2026 Doce Momento - Todos os direitos reservados.</p>
     </footer>
 
-    <script src="scripts/script.js"></script>
+
+
+<div id="cart-panel">
+
+<div id="form-overlay">
+  <div id="form-endereco">
+    <h2>Endereço de entrega</h2>
+
+    <div class="form-grid">
+      <input type="number" id="cep" placeholder="CEP">
+      <select id="uf">
+  <option value="">UF</option>
+  <option>AC</option>
+  <option>AL</option>
+  <option>AP</option>
+  <option>AM</option>
+  <option>BA</option>
+  <option>CE</option>
+  <option>DF</option>
+  <option>ES</option>
+  <option>GO</option>
+  <option>MA</option>
+  <option>MT</option>
+  <option>MS</option>
+  <option>MG</option>
+  <option>PA</option>
+  <option>PB</option>
+  <option>PR</option>
+  <option>PE</option>
+  <option>PI</option>
+  <option>RJ</option>
+  <option>RN</option>
+  <option>RS</option>
+  <option>RO</option>
+  <option>RR</option>
+  <option>SC</option>
+  <option>SP</option>
+  <option>SE</option>
+  <option>TO</option>
+</select>
+      
+      <input type="text" id="endereco" placeholder="Endereço" class="full">
+      
+      <input type="text" id="bairro" placeholder="Bairro">
+      <input type="text" id="cidade" placeholder="Cidade">
+      
+      <input type="number" id="numero" placeholder="Número">
+      <input type="text" id="complemento" placeholder="Complemento" class="full">
+    </div>
+
+    <div class="form-actions">
+      <button onclick="fecharFormulario()">Cancelar</button>
+      <button onclick="EnviarPedidoCarrinho()">Confirmar Pedido</button>
+    </div>
+  </div>
+</div>
+
+  <h2>Seu Carrinho</h2>
+
+  <div id="cart-items"></div>
+
+  <button class="fechar" onclick="closeCart()">Fechar</button>
+  <button class="finalizar" onclick="mostrarFormulario()">Finalizar Pedido</button>
+<button class="finalizar" id="btn-enviar" onclick="EnviarPedidoCarrinho()" style="display:none;">
+  Confirmar Pedido
+</button>
+</div>
+
+
+
+    <script src="scripts/cart.js"></script>
 </body>
 </html>

@@ -71,8 +71,8 @@ nav {
 
 /* 3. HERO SECTION (BANNER PRINCIPAL) */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1089&auto=format&fit=crop') center/cover;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url('../assets/imgs/img.png') center/cover no-repeat;
     height: 80vh;
     display: flex;
     align-items: center;
@@ -190,17 +190,4 @@ footer {
     color: #999;
 }
 
-/* 6. RESPONSIVIDADE (TABLET E PC) */
-@media (min-width: 768px) {
-    .hero-content h1 { font-size: 3.5rem; }
-    
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
-    }
-}
 
-@media (min-width: 1024px) {
-    .product-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 colunas em PCs */
-    }
-}

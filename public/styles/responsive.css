@@ -1,0 +1,105 @@
+/* 6. RESPONSIVIDADE (TABLET E PC) */
+@media (min-width: 768px) {
+    .hero-content h1 { font-size: 3.5rem; }
+    
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+    }
+}
+
+@media (min-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas em PCs */
+    }
+}
+
+/* --- ESTILO DOS ITENS (Com a foto) --- */
+.cart-item-lin {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f9f0f2;
+}
+
+.cart-img-thumb {
+    width: 50px; /* Reduzi um pouco para não dominar a linha */
+    height: 50px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-item-info b {
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    display: block;
+}
+
+.cart-item-info span {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+/* --- BOTÃO DE REMOVER (Ícone sutil) --- */
+.btn-remove {
+    background: transparent;
+    color: #ccc;
+    border: none;
+    font-size: 1.2rem;
+    padding: 5px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.btn-remove:hover { color: #ff4d4d; }
+
+/* --- RESPONSIVIDADE PROFISSIONAL (Mobile) --- */
+@media (max-width: 600px) {
+    #cart-panel {
+        width: 100%;
+        right: -100%;
+        border-radius: 20px 20px 0 0; /* Arredondado só no topo */
+        height: 85vh; /* Não ocupa a tela toda, deixa um respiro no topo */
+        top: auto;
+        bottom: -85vh; /* Começa escondido embaixo */
+        transition: bottom 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    #cart-panel.active {
+        bottom: 0;
+        right: 0; /* trava o right */
+    }
+
+    /* Título do carrinho mais delicado no mobile */
+    #cart-panel h2 {
+        text-align: center;
+        font-size: 1.3rem;
+        padding: 20px 0 10px;
+    }
+
+    /* Ícone flutuante: Transformado em um botão fixo moderno */
+    #cart-icon {
+        top: auto;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%; /* Redondo total */
+        padding: 0;
+    }
+
+    #cart-count {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        margin: 0;
+    }
+}
