@@ -38,23 +38,21 @@ Aplicação web para venda de bolos artesanais com carrinho de compras, formulá
 
 ## 📁 Estrutura do projeto
 
-public/
-├── assets/
-│   └── imgs/
+```bash
+public
+├── assets
+│   └── imgs
 │       ├── img.avif
 │       ├── img.jpg
 │       ├── img.png
 │       └── img.webp
-│
-├── scripts/
+├── scripts
 │   └── cart.js
-│
-├── styles/
+├── styles
 │   ├── style.css
 │   ├── cart.css
 │   ├── forms.css
 │   └── responsive.css
-│
 ├── index.html
 └── README.md
 
