@@ -5,7 +5,7 @@ Aplicação web para venda de bolos artesanais com carrinho de compras, formulá
 ---
 
 # Sistema online
- virtual-cakes.vercel.app
+virtual-cakes.vercel.app
 ---
 
 ## 🚀 Funcionalidades
