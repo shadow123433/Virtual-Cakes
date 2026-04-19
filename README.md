@@ -55,8 +55,9 @@ public
 │   └── responsive.css
 ├── index.html
 └── README.md
+```bash
 
----
+
 
 ## 📲 Integração com WhatsApp
 
