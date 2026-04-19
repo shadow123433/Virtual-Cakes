@@ -55,7 +55,7 @@ public
 │   └── responsive.css
 ├── index.html
 └── README.md
-```bash
+```
 
 
 
