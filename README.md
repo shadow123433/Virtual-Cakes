@@ -88,3 +88,5 @@ Com mensagem contendo:
 Thiago Martins  
 
 ---
+
+⭐ Se este projeto foi útil ou interessante, considere deixar uma estrela no repositório.
